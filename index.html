@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+
+    <link rel="stylesheet" href="css/mystyle.css">
+    <script src="js/myscript.js"></script>
+
+</head>
+<body onload="citySelect()">
+<div class="block">
+    <div class="dropdown">
+        <input type="text" class="inputStyle" id="inputArrayItem" onkeyup="selectCity()" placeholder="Выбрать город"
+               value/>
+        <div class="dropdown-content">
+            <ul id="ulArray" class="customScroll"></ul>
+        </div>
+    </div>
+</div>
+<div class="block">
+    <form>
+        <input type="text" class="inputStyle" name="quantity" id="quantity" placeholder="Количество элементов" value/>
+        <label for="color">Выбрать цвет:</label>
+        <input type="checkbox" onclick="noChangeColor()" name="color" style="cursor: pointer"/>
+        <br>
+        <br>
+        <input type="color" class="hide" id="color" value="#FFFFFF" style="cursor: pointer">
+        
+    </form>
+    <br>
+    <button class="button" type="button" onclick="changeColor();customScroll();">Обновить</button>
+</div>
+</body>
+</html>
